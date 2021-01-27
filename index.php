@@ -2,7 +2,24 @@
 	include_once './lib/parsedown.inc.php';
 	include_once './lib/main.inc.php';
 	common_header();
-	$files = glob('./md/*.{md}', GLOB_BRACE);
+	
+	if(isset($_GET['site'])) {
+		if($_GET['site'] == "privacy") {
+			$files = glob('./md/privacy.{md}', GLOB_BRACE);
+		}
+
+		if($_GET['site'] == "impress") {
+			$files = glob('./md/impress.{md}', GLOB_BRACE);
+		}
+
+		if($_GET['site'] == "about") {
+			$files = glob('./md/about.{md}', GLOB_BRACE);
+		}
+		
+	} else {
+		$files = array_diff(glob('./md/*.{md}', GLOB_BRACE), array('./md/privacy.md','./md/impress.md','./md/about.md'));
+	}
+
 
 	arsort($files);
 	foreach($files as $file) {

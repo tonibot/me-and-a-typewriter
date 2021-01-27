@@ -12,4 +12,7 @@
 				
 	if(in_array("./md/about.md", $files))
 		echo'<a href="./index.php?site=about">'. $cfgNAV[3]. '</a>';
+
+	echo'<a href="./rss.php">RSS</a>';
+
 ?>

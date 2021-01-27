@@ -1,6 +1,6 @@
 <?php
 	/////////////////////Basics
-	$cfgTitle = "me & a typewriter";
+	$cfgTitle = "me and a typewriter";
 	$cfgURL = "https://www.robotisch.de";
 	
 	/////////////////////Theme
@@ -15,4 +15,5 @@
 	$cfgLang = "de";
 	$cfgLangCode = "de-de";
 	$cfgLangExt = "Deutsch";
-	$cfgNAV = array("blog","datenschutz","impressum","&uuml;ber");
+	$cfgNAV = array("blog","datenschutz","impressum","&uuml;ber");	
+//	$cfgNAV = array("blog","privacy","impress","about");
