@@ -19,7 +19,7 @@ __me & a typewriter__ don't need a database. Just write an arcticle in markdown 
 
 add a div with class="tags" in every your markdown-file, eg.
 
- <div class="tags">Test, News, Code</div>
+```<div class="tags">Test, News, Code</div>```
 
 ## Installation
 * clone source and drop it on your php-enabled webspace.
