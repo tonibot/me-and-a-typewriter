@@ -15,6 +15,12 @@ __me & a typewriter__ don't need a database. Just write an arcticle in markdown 
  * Every article-file (.md) has to start with a date and time (24h) information YYYYMMDDHHmm, e.g. 202101161800
  * create or edit a privacy.md, about.md, impress.md for further legal informations and a notes about your blog. Delete one or more of these file to configure your navbar.
 
+## Tags
+
+add a div with class="tags" in every your markdown-file, eg.
+
+ <div class="tags">Test, News, Code</div>
+
 ## Installation
 * clone source and drop it on your php-enabled webspace.
 * edit ./lib/config.php.inc
