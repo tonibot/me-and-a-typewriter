@@ -2,6 +2,7 @@
 	/////////////////////Basics
 	$cfgTitle = "me and a typewriter";
 	$cfgURL = "https://www.robotisch.de";
+	$cfgArticlePerPage = 1;
 	
 	/////////////////////Theme
 	
@@ -12,8 +13,11 @@
 
 
 // Language Setting
-	$cfgLang = "de";
-	$cfgLangCode = "de-de";
-	$cfgLangExt = "Deutsch";
-	$cfgNAV = array("blog","datenschutz","impressum","&uuml;ber");	
-//	$cfgNAV = array("blog","privacy","impress","about");
+	$cfgLang = "en";
+	$cfgLangCode = "en-en";
+	$cfgLangExt = "english";
+//	$cfgNAV = array("blog","datenschutz","impressum","&uuml;ber");	
+	$cfgNAV = array("blog","privacy","impress","about");
+
+	$cfgSkipperNext = "next";
+	$cfgSkipperPrev = "prev";

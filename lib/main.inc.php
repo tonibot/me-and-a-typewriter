@@ -1,7 +1,7 @@
 <?php
 	
 function common_header(){
-include_once 'lib/config.inc.php';
+include 'lib/config.inc.php';
 print'
 <!DOCTYPE html>
 <html lang="'. $cfgLang .'">
@@ -24,7 +24,7 @@ print'
 			<div class="headline">'. $cfgTitle .'</div>
 		</header>
 		<nav>';
-		include_once 'nav.php';
+		include_once './nav.php';
 		
 echo'	
 		</nav>
