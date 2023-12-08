@@ -67,5 +67,6 @@
 				echo"<a href=\"./index.php?cnt=$cnt\" class=\"skipper\" style=\"color:#fff; float: right;\">$cfgSkipperNext ▶︎</a>";
 			}
 		}
-	}		
+	}
+	common_footer();
 ?>
