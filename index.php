@@ -1,7 +1,7 @@
 <?php
-	include_once './lib/config.inc.php';
 	include_once './lib/parsedown.inc.php';
 	include_once './lib/main.inc.php';
+	include ("./lib/config.inc");
 	common_header();
 	
 	if(isset($_GET['site'])) {
@@ -39,7 +39,7 @@
 		
 		foreach($sliced as $file) {
 			$anchor = substr($file, 5);
-			print'<article class="contentBlock">';
+			print'<article>';
 			$contents = file_get_contents($file);
 			$Parsedown = new Parsedown();
 			$Parsedown->setSafeMode(false);
@@ -48,7 +48,6 @@
 			echo $Parsedown->text($contents);
 			print"<p><br />perma-link: <a href=\"./index.php?site=$anchor\" id=\"node\">$anchor</a></p>";
 			print'</article>';
-			print'<br /><br />';
 			$cnt++;
 
 			if($cnt%$cfgArticlePerPage == 0) {
@@ -59,12 +58,12 @@
 
 			if($cnt > $cfgArticlePerPage && $cnt%$cfgArticlePerPage == 0 || $cnt == count($files)) {
 				if(isset($_GET['cnt'])) {
-					echo"<a href=\"./index.php?cnt=$skip\" class=\"skipper\" style=\"color:#fff; float:left;\">◀︎ $cfgSkipperPrev</a>";
+					echo"<a href=\"./index.php?cnt=$skip\" class=\"skipper\" style=\"float:left;\">◀︎</a>";
 				}
 			}
 
 			if($cnt%$cfgArticlePerPage == 0 && $cnt != count($files)) {
-				echo"<a href=\"./index.php?cnt=$cnt\" class=\"skipper\" style=\"color:#fff; float: right;\">$cfgSkipperNext ▶︎</a>";
+				echo"<a href=\"./index.php?cnt=$cnt\" class=\"skipper\" style=\"float: right;\">▶︎</a>";
 			}
 		}
 	}

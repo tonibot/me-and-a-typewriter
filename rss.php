@@ -1,5 +1,5 @@
 <?php
-	include_once './lib/config.inc.php';
+	include_once './lib/config.inc';
 	include_once './lib/parsedown.inc.php';
 	
 	function get_string_between($string, $start, $end){

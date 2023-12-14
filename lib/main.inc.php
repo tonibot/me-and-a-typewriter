@@ -1,15 +1,24 @@
 <?php
-	
+if(isset($_REQUEST['site'])) {
+	if($_REQUEST['site'] == "tags") {
+		header('location: ./tags.php');
+	}
+	if($_REQUEST['site'] == "rss") {
+		header('location: ./rss.php');
+	}
+
+}
 function common_header(){
-include 'lib/config.inc.php';
+include ("./lib/config.inc");
+include ("./lib/languages.inc.php");
 print'
 <!DOCTYPE html>
 <html lang="'. $cfgLang .'">
 	<head>
 		<title>'. $cfgTitle .'</title>
 			<meta charset="utf-8">
-			<meta name="content-language" content="'. $cfgLang .'" />
-			<meta name="language" content="'. $cfgLangExt .'" />
+			<meta name="content-language" content="'. $language[$cfgLang][2] .'" />
+			<meta name="language" content="'. $language[$cfgLang][3] .'" />
 			<meta name="keywords" content="" />
 			<meta name="robots" content="INDEX,FOLLOW" />
 			<meta name="format-detection" content="telephone=yes">

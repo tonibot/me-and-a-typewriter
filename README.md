@@ -1,28 +1,48 @@
 # me & a typewriter
 
-A blogsystem based on markdownfiles.
-I really love to use markdown for my private notes, recipes, articles etc.
-So I decided to script a simple microblogging system in php which is based on markdown.
+Edition Ni
 
-## Libraries & sources
-* __parsedown__ for parsing (https://github.com/erusev/parsedown)
-* Stylesheets from __markdowncss__ (https://markdowncss.github.io/).
+
+ChatGPT
+
+A very simple blog system that displays Markdown files as articles in a responsive web view.
+
+I really love Markdown and have used it for my private notes, recipes, articles, and the novel, which will be released as soon as I retire. 😄
+
+I prefer Typora for editing my Markdown files (https://typora.io/), but you are free to use any editor—even "echo >" will do the job.
+
+## Libraries
+
+__parsedown__ for parsing the Markdown files (https://github.com/erusev/parsedown)
 
 ## Simple
-__me & a typewriter__ don't need a database. Just write an arcticle in markdown and upload the md-file into /md/.
+__me & a typewriter__ don't need a database. Just create your content and upload (via ftp or scp) the md-file into /md/.
 
-* Filename convention
- * Every article-file (.md) has to start with a date and time (24h) information YYYYMMDDHHmm, e.g. 202101161800
- * create or edit a privacy.md, about.md, impress.md for further legal informations and a notes about your blog. Delete one or more of these file to configure your navbar.
+## Conventions
 
-## Tags
+* In order to identify your content file you must use the suffix **".md"**.
+* Each content file (.md) has to start with a date and time (24h) information:
 
-add a div with class="tags" in every your markdown-file, eg.
+​		YYYYMMDDHHmm, e.g. 202101161800
 
-```<div class="tags">Test, News, Code</div>```
+ * create or edit a privacy.md, about.md, impress.md for further legal informations and a notes about your blog.
 
-## Installation
-* clone source and drop it on your php-enabled webspace.
-* edit ./lib/config.php.inc
-  * select theme and edit language settings.
-  * you can find a lot auf markdown css files on the web, just drop them to ./lib/css/ and edit the config file.
+ * add a div with the class "tags" to your markdown-file, eg.
+
+   ```<div class="tags">Test, News, Code</div>```
+
+## Installation & Configuration
+* clone source and upload it to your php-enabled webspace.
+* call the config.php to setup up your blog (themes, url, navigation etc.)
+* chmod ./lib/config.inc to read-only to secure your config
+
+## Themes
+
+* Aries dark/lime
+* Taurus dark/red
+* Virgo  dark/purple
+* Pesce dark/blue
+* Aquarius dark/cyan
+* frosty light/black (typewriter)
+* newdish light/beachy
+
