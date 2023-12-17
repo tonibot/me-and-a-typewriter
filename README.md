@@ -11,6 +11,16 @@ I really love Markdown and have used it for my private notes, recipes, articles,
 
 I prefer Typora for editing my Markdown files (https://typora.io/), but you are free to use any editor—even "echo >" will do the job.
 
+## Markdown?
+
+Markdown is a easy-to-learn markup language to style text without a big fat editor.
+
+Eg. '# Lorem ipsum dolor sit amet' eq. '<h1>' or '** lorem **' for emphasis. 
+
+For further Information have a look here:
+
+https://docs.github.com/de/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
+
 ## Libraries
 
 __parsedown__ for parsing the Markdown files (https://github.com/erusev/parsedown)
@@ -43,6 +53,6 @@ __me & a typewriter__ don't need a database. Just create your content and upload
 * Virgo  dark/purple
 * Pesce dark/blue
 * Aquarius dark/cyan
-* frosty light/black (typewriter)
-* newdish light/beachy
+* frosty light/black (typewriter) (⚠️ google fonts)
+* newdish light/beachy (⚠️ google fonts)
 
