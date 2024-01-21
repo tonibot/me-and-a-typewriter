@@ -49,6 +49,7 @@
                 if(!$file) {
                     $this->Error('Unable to open "config.inc"');
                 }
+                ftruncate($file, 0);
                 $config = "<?php\n";
                 $config .= "\$cfgTitle = \"$title\";\n";
                 $config .= "\$cfgURL = \"$url\";\n";
