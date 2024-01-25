@@ -1,5 +1,5 @@
 :root {
-  --dark: #33a38f;
+  --dark: #57386f;
   --darker: var(--dark);
   --darkest: var(--dark);
 
@@ -89,7 +89,7 @@ article {
 h1,h2,h3,h4 {
   margin: 1.414rem 0 .5rem;
   font-weight: 900;
-  letter-spacing: -4px;
+  letter-spacing: -0.2rem;
   line-height: 1.0;
 }
 
