@@ -25,18 +25,24 @@ html {
   margin: 0px;
   padding: 0px;
   background: linear-gradient(var(--accent-four), var(--accent-three));
-  font-size: 14px;
+  font-size: 10px;
 }
 
-@media screen and (min-width: 32rem) and (max-width: 48rem) {
+@media only screen and (max-width: 390px) {
+    html {
+      font-size: 0.7rem !important;
+    }
+}
+  
+@media only screen and (min-width: 391px) and (max-width: 1024px) {
   html {
-    font-size: 15px;
+    font-size: 1.0rem !important;
   }
 }
 
-@media screen and (min-width: 48rem) {
+@media only screen and (min-width: 1025px) {
   html {
-    font-size: 16px;
+    font-size: 1.125rem !important;
   }
 }
 
@@ -44,20 +50,19 @@ body {
   line-height: 1.85;
   color: var(--darkest);
   margin: 0px;
-  padding: 0px;;
+  padding: 0px;
   max-width: 100%;
 }
 
 header {
 	text-align: center;
 	max-width: 100% !important;
-  max-height: 160px;
   margin: 0px !important;
   padding: 1rem !important;
 }
 
 nav {
-	text-align: center;;
+	text-align: center;
   font-weight: 900;
 	background: rgba(255,255,255,0.7);
   max-width: fit-content !important;
@@ -79,11 +84,24 @@ nav a:hover, nav a:active {
 
 main {
   padding: 0px !important;
-  margin: 0px 14rem !important;
+  margin: 0px 5rem !important;
+}
+
+@media only screen and (max-width: 390px) {
+  main {
+    margin: 0px 20px !important;
+  }
+}
+
+@media only screen and (min-width: 391px) and (max-width: 1024px) {
+  main {
+    margin: 0px 2rem !important;
+  }
 }
 
 article {
   margin-top: 3rem !important;
+  text-wrap: balance;
   border-radius: 20px;
 	background: var(--lightest);
   padding: 2rem !important;
@@ -212,7 +230,7 @@ a:active {
 /*custom*/
 
 .headline {
-  font-size: 8rem !important;
+  font-size: 4rem;
   font-weight: 900;
   background: linear-gradient(var(--accent-two), var(--accent-three));
   background-clip: text;
@@ -230,7 +248,7 @@ input, select {
   border: 0px;
   border-radius: 5px;
   padding: 20px !important;
-  min-width: 100%;
+  min-width: 95%;
 }
 
 input[type="checkbox"] {

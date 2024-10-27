@@ -1,22 +1,21 @@
 :root {
-  --dark: #606060;
-  --darker: #303030;
-  --darkest: #202020;
+  --dark: #61625b;
+  --darker: #4f5246;
+  --darkest: #181914;
 
-  --light: #dddddd;
-  --lighter: #f0f0f0;
+  --light: #eeeeee;
+  --lighter: #f2f2f2;
   --lightest: #fefefe;
 
-  --accent-one:  #404040;
-  --accent-two: #303030;
+  --accent-one:  #98969e;
+  --accent-two: #464b3a;
   --accent-three: #202020;
 
   --warning: #d92f2f;
 }
 
 * {
-  @import url(https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap);
-  font-family: 'Merriweather', "Georgia", "Times" serif;
+  font-family: 'Baskerville', "Times" serif;
 }
 
 html {
@@ -24,18 +23,24 @@ html {
   margin: 0px;
   padding: 0px;
   background: var(--lightest);
-  font-size: 14px;
+  font-size: 10px;
 }
 
-@media screen and (min-width: 32rem) and (max-width: 48rem) {
+@media only screen and (max-width: 390px) {
+    html {
+      font-size: 0.7rem !important;
+    }
+}
+  
+@media only screen and (min-width: 391px) and (max-width: 1024px) {
   html {
-    font-size: 15px;
+    font-size: 1.0rem !important;
   }
 }
 
-@media screen and (min-width: 48rem) {
+@media only screen and (min-width: 1025px) {
   html {
-    font-size: 16px;
+    font-size: 1.125rem !important;
   }
 }
 
@@ -43,25 +48,23 @@ body {
   line-height: 1.85;
   color: var(--darkest);
   margin: 0px;
-  padding: 0px;;
+  padding: 0px;
   max-width: 100%;
 }
 
 header {
 	text-align: center;
 	max-width: 100% !important;
-  max-height: 160px;
   margin: 0px !important;
   padding: 1rem !important;
 }
 
 nav {
-	text-align: center;;
+	text-align: center;
   font-weight: 300;
-	background: var(--lightest);
   max-width: fit-content !important;
-  border-top: 1px solid var(--dark);
-  border-bottom: 1px solid var(--dark);
+  border-top: 1px dotted var(--accent-one); 
+  border-bottom: 1px dotted var(--accent-one);
   margin: 0px auto !important;
   padding: 0.5rem !important;
   font-size: 1.75rem;
@@ -69,36 +72,49 @@ nav {
 
 nav a:link, nav a:visited {
   margin: 5px;
-	color: var(--dark);
+	color: var(--accent-one);
   text-decoration: none;
 }
 
 nav a:hover, nav a:active {
-  color: var(--light);
+  color: var(--dark);
+}
+
+nav a::before, nav a::after {
+  content:"";
 }
 
 main {
   padding: 0px !important;
-  margin: 0px 14rem !important;
+  margin: 0px 15rem !important;
 }
 
+@media only screen and (max-width: 390px) {
+  main {
+    margin: 0px 20px !important;
+  }
+}
+
+@media only screen and (min-width: 391px) and (max-width: 1024px) {
+  main {
+    margin: 0px 2rem !important;
+  }
+}
+  
 article {
   margin-top: 3rem !important;
-  border-radius: 7px;
-	background: var(--lightest);
+  text-wrap: balance;
 }
 
 h1,h2,h3,h4 {
-  margin: 1.414rem 0 .5rem;
   line-height: 1.0;
 }
 
 h1 {
-  font-size: 3.998rem;
-  font-weight: 300;
-  background: linear-gradient(var(--accent-three), var(--accent-one));
+  font-size: 2.998rem;
+  font-weight: 100;
+  background: linear-gradient(var(--dark), var(--darkest));
   background-clip: text;
-  color: rgba(0,0,0,0);
 }
 
 h1:first {
@@ -128,10 +144,11 @@ h5 {
 h6 {
   font-size: .88rem;
   padding: 5px 15px !important;
-  border-radius: 20px;
-  width:fit-content;
-  margin: 0px 2rem !important;
-  color: var(--light);
+  border-radius: 3px;
+  width: fit-content;
+  margin: 0px 1rem !important;
+  color: var(--accent-one);
+  border-top: 1px solid var(--accent-one);
 }
 
 small {
@@ -155,8 +172,7 @@ p {
     line-height: 1.45;  
 }
 
-p,
-*:not(div):not(img):not(body):not(html):not(li):not(blockquote):not(p) {
+p,*:not(div):not(img):not(body):not(html):not(li):not(blockquote):not(p) {
   margin: 1rem auto;
   max-width: 95%;
   padding: 0.25rem;
@@ -200,15 +216,23 @@ pre {
 
 a,
 a:visited {
-  color: var(--accent-three);
+  text-decoration: none;
+  color: var(--dark);
 }
 
 a:hover,
 a:focus,
 a:active {
-  color: var(--accent-two);
+  color: var(--darkest);
 }
 
+a::before {
+  content: "[  ";
+}
+
+a::after{
+  content: " ]";
+}
 /*custom*/
 
 .headline {
@@ -232,7 +256,7 @@ input, select {
   border: 0px;
   border-radius: 5px;
   padding: 20px !important;
-  min-width: 100%;
+  min-width: 95%;
 }
 
 input[type="checkbox"] {

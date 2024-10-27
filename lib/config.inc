@@ -1,10 +1,8 @@
 <?php
-$cfgTitle = "me and a typewriter";
-$cfgURL = "https://www.robotisch.de";
+$cfgTitle = "me and a typewriter - test";
+$cfgURL = "https://www.robotisch.de/blog";
 $cfgArticlePerPage = "10";
 $cfgLang = "de";
-$cfgTheme = "gohan.css";
+$cfgTheme = "aquarius.css";
 $cfgNav = array(true,true,true,true,true,true);
 ?>
-
-

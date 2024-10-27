@@ -57,7 +57,6 @@
                 $config .= "\$cfgLang = \"$lang\";\n";
                 $config .= "\$cfgTheme = \"$theme\";\n";
                 $config .= "\$cfgNav = array($home,$privacy,$impress,$about,$tags,$rss);\n?>";
-                $config .= "\n\n\n";
                 fwrite($file,$config);
                 fclose($file);
             }
